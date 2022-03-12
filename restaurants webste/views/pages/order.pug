@@ -1,0 +1,25 @@
+html 
+    head 
+        style 
+            include ../../public/style.css
+body 
+    include ../partials/header
+
+    p Order '#{order._id}'
+    br
+    div#order
+        p #[strong Username]: #{order.username}
+        p #[strong Restaurant]: #{order.restaurantName}
+        p #[strong Subtotal]: $#{order.subtotal}
+        p #[strong Tax]: $#{order.tax}
+        p #[strong Delivery Fee]: $#{order.fee}
+        p #[strong Total]: $#{order.total}
+        br
+    h3 Items:
+    ul
+        each item in order.order 
+            li
+                p#item #{item.name} (x#{item.quantity})
+    br
+
+        

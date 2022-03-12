@@ -1,0 +1,44 @@
+html 
+    head 
+        title #{user.username}
+        style 
+            include ../../public/style.css
+body 
+    include ../partials/header
+
+    h1#UserName  #{user.username}
+    if owner 
+        form(method='POST' action='/users')
+            h3 Profile Privacy:
+            if user.privacy
+                div#radio
+                    input#yes(name="privacy" type="radio" value="true" checked) 
+                    label(for="yes") Private
+                    br
+                    input#no(name="privacy" type="radio" value="false")
+                    label(for="no") Public
+                    br
+                    input(type="submit" value="Save Changes")
+                    br
+                    br
+                    br
+            else 
+                div#radio
+                    input#yes(name="privacy" type="radio" value="true") 
+                    label(for="yes") Private
+                    br
+                    input#no(name="privacy" type="radio" value="false" checked)
+                    label(for="no") Public
+                    br
+                    input(type="submit" value="Save Changes")
+                    br
+                    br
+                    br
+    
+    h3 Orders:   
+    if user.orders.length == 0
+        p(style={color: 'red'}) This user has no orders yet.
+    else 
+        each order in user.orders 
+            a(href='/orders/'+ order._id) #{order._id}
+            br

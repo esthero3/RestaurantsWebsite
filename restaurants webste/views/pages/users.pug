@@ -1,0 +1,15 @@
+html 
+    head 
+        title User Profiles
+        style 
+            include ../../public/style.css
+body 
+    include ../partials/header
+
+    h1 User Profiles 
+    each user in users 
+        ul 
+            li 
+                a#name(href='/users/' + user._id) #{user.username}
+            br
+        

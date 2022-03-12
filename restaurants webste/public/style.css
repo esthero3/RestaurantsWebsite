@@ -1,0 +1,77 @@
+#name{
+    text-transform: capitalize;
+    color: rgb(253, 141, 141);
+}
+
+#UserName {
+    text-transform: capitalize;
+    font-size: 40;
+    text-shadow: 1px 1px 10px rgba(21, 180, 167, 0.822);
+}
+
+#order {
+    text-transform: capitalize;
+    text-shadow: 1px 1px 10px rgba(180, 21, 21, 0.397);
+}
+
+#item {
+    text-shadow: 1px 1px 10px rgba(21, 135, 180, 0.397);
+}
+
+#header ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.616);
+}
+
+#header li{
+    float: left;
+}
+
+#header li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10;
+    text-shadow: 1px 1px 10px rgb(119, 14, 14), 1px 1px 10px rgb(7, 0, 0);
+}
+
+/* #header li a.name{
+    background-color: rgba(0, 255, 255, 0.212);
+    margin-right: 20;
+    border-right: 1px solid;
+} */
+
+#header li a:hover{
+    background-color: yellow;
+}
+
+#message {
+    padding-top: 70px;
+    font-size: 70;
+    text-align: center;
+    color: rgb(253, 141, 141);
+    text-shadow: 1px 1px 10px rgba(21, 180, 167, 0.822);
+}
+
+#radio {
+    padding-top: 0px;
+}
+
+.column {
+    float: left;
+}
+
+.left{
+    width: 10%;
+}
+
+.right {
+    width: 25%;
+}
+
+.middle {
+    width: 65%;
+}

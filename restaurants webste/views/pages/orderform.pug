@@ -1,0 +1,16 @@
+html 
+    head 
+        title Order Form
+        style
+            include ../../public/style.css
+body(onload='init()') 
+    include ../partials/header
+    select#restaurant-select
+    br
+    br
+    div#info
+    div#main
+        div#left(class="column left")
+        div#middle(class="column middle") 
+        div#right(class="column right")
+    script(src="orderform.js") 
